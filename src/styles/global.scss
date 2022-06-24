@@ -1,6 +1,4 @@
-$primary: red;
-$secondary: blue;
-
+@import 'bootstrap';
 html {
   font-family: generalFont;
 }
@@ -10,5 +8,5 @@ body {
 }
 
 h1 {
-  color: $secondary;
+  color: $primary
 }

@@ -1,17 +1,25 @@
-$blue:    #0d6efd !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+// Main colors
+
+$blue:    #4274f6 !default;
+$indigo:  #39adfc !default;
+$purple:  #25234d !default;
+$cyan:    #4fade3 !default;
+$gray:    #4c4c4c !default;
+$light-blue: #0bbafb !default;
+
+// Main colors
+
+// Bootstrap colors
 $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
-$cyan:    #0dcaf0 !default;
 $black:   #000000 !default;
 $white:   #FFFFFF !default;
-$black:   #000000 !default;
-// scss-docs-end color-variables
+
+// Bootstrap colors
 
 // scss-docs-start colors-map
 $colors: (
@@ -29,13 +37,32 @@ $colors: (
         "white":      $white,
 ) !default;
 
-$primary:       $red !default;
-$secondary:     $green !default;
+$primary:       $blue !default;
+$secondary:     $indigo !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $green !default;
 $dark:          $black !default;
+
+// Spacers
+
+$spacer: 4px !default;
+$spacers: (
+        0: 0,
+        1: $spacer * 1,
+        2: $spacer * 2,
+        3: $spacer * 3,
+        4: $spacer * 4,
+        5: $spacer * 5,
+        6: $spacer * 6,
+        7: $spacer * 7,
+        8: $spacer * 8,
+        9: $spacer * 9,
+        10: $spacer * 10,
+) !default;
+
+// Spacers
 
 @import '~bootstrap/scss/bootstrap';

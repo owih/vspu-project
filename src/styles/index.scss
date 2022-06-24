@@ -1,3 +1,6 @@
-@use 'fonts';
-@use 'global';
+@import 'fonts';
 @import 'bootstrap';
+@import 'global';
+.btn {
+  width: 400px;
+}
