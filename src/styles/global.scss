@@ -1,0 +1,14 @@
+$primary: red;
+$secondary: blue;
+
+html {
+  font-family: generalFont;
+}
+
+body {
+  background: url('../images/img.jpg');
+}
+
+h1 {
+  color: $secondary;
+}
