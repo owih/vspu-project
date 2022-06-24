@@ -27,8 +27,12 @@ module.exports = {
             filename: '[name].[contenthash].css'
         }),
         new HtmlWebpackPlugin({
-            filename: "example.html",
-            template: './src/bundles/example.html'
+            filename: "webinar.html",
+            template: './src/bundles/webinar.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "main.html",
+            template: './src/bundles/main.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
