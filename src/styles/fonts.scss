@@ -2,3 +2,14 @@
   font-family: generalFont;
   src: url('../fonts/aavanteintbook.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: courseFont;
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: courseFontBold;
+  src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: bold;
+}

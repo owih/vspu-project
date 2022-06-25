@@ -6,6 +6,8 @@ if (process.env.NODE_ENV === 'production') {
     mode = 'production'
 }
 
+const path = require('path');
+
 console.log(mode + ' mode')
 
 module.exports = {
@@ -20,6 +22,10 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
+        static: {
+            directory: path.join(__dirname, 'src'),
+        },
+        compress: true,
         port: 8080,
     },
     plugins: [
@@ -28,11 +34,11 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: "webinar.html",
-            template: './src/bundles/webinar.html'
+            template: './src/webinar.html'
         }),
         new HtmlWebpackPlugin({
             filename: "main.html",
-            template: './src/bundles/main.html'
+            template: './src/main.html'
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',

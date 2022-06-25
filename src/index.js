@@ -1,5 +1,6 @@
 import './styles/index.scss';
 import 'bootstrap';
 import Example from "./scripts/script";
+import Slider from "./scripts/slider";
 
-[...document.querySelectorAll('div')].forEach((elem) => new Example(elem));
+[...document.querySelectorAll('.swiper')].forEach((elem) => new Slider(elem));

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve --open",
-    "watch": "set NODE_ENV=development&&webpack --watch",
+    "watch": "webpack-dev-server --mode development",
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack"
   },
@@ -33,7 +33,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "autoprefixer": "^9.7.0",
-    "bootstrap": "^5.2.0-beta1"
+    "bootstrap": "^5.2.0-beta1",
+    "swiper": "^8.2.4"
   },
   "overrides": {
     "autoprefixer": "10.4.5"
