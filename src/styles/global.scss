@@ -13,7 +13,7 @@ body {
   height: 100%;
   font-family: 'generalFont', 'Arial', 'SansSerif', 'sans-serif' !important;
   font-weight: 700;
-  color:  rgba(37,35,77,.812);;
+  color:  rgba(37,35,77,.812);
 }
 .title-sided {
   &__main {
@@ -69,15 +69,11 @@ body {
 }
 .about{
   position: relative;
-  &__right{
+  background: url("../images/about/children.png") center no-repeat;
+  &__container{
     display: block;
     width: max-content;
     margin: 40px 140px 40px auto;
-  }
-  &__image{
-    position: absolute;
-    z-index: -1;
-    width: 106.6%;
   }
   &__title{
     font-size: 32px;
