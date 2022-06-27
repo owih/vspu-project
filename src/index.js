@@ -1,5 +1,6 @@
 import './styles/index.scss';
 import 'bootstrap';
+import './scripts/menuBurger'
 import Slider from "./scripts/slider";
 import InputMaskPlug from "./scripts/inputmask";
 import Filter from "./scripts/filter";
