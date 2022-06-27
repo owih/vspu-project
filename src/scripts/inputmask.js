@@ -1,4 +1,4 @@
-import inputMask from "inputmask/lib/inputmask";
+import inputMask from "../scripts/inputmask";
 
 export default class InputMaskPlug {
     constructor(block) {
