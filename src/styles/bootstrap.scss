@@ -114,6 +114,16 @@ $btn-transition:              color .15s ease-in-out, opacity .15s ease-in-out, 
 
 // Button
 
+// Inputs
+
+//$input-focus-bg:                        $input-bg !default;
+$input-focus-border-color:              #4fade3 !default;
+//$input-focus-color:                     $input-color !default;
+//$input-focus-width:                     $input-btn-focus-width !default;
+$input-focus-box-shadow:                0 0 10px 0 #4fade3 !default;
+
+// Inputs
+
 @import '~bootstrap/scss/bootstrap';
 
 .btn-primary {

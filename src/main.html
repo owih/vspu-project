@@ -67,7 +67,199 @@
                 </div>
             </div>
         </section>
-        <section>api</section>
+        <section class="section">
+            <div class="container">
+                <div class="section__content">
+                    <div class="row">
+                        <div class="col-3">
+                            <form class="filter">
+                                <div class="filter__title">
+                                    Фильтры
+                                </div>
+                                <div class="filter__name">
+                                    <input class="form-control" type="text" name="filter-name" placeholder="Поиск по названию">
+                                </div>
+                                <div class="filter__body">
+                                    <div class="filter__item">
+                                        <a class="filter__collapse" data-bs-toggle="collapse" href="#price" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <span class="filter__show">
+                                                <svg class="filter__icon filter__icon_show" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            </span>
+                                            Стоимость
+                                        </a>
+                                        <div class="filter__hidden collapse show" id="price">
+                                            <div class="filter__content">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="filter__wrap">
+                                                            <input type="text"
+                                                                   data-target="input"
+                                                                   data-inputmask="'mask': '99999'"
+                                                                   class="form-control"
+                                                                   name="MIN_PRICE"
+                                                                   placeholder="от">
+                                                            <span class="filter__clear" data-target="clear">
+                                                                <svg class="filter__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="filter__wrap">
+                                                            <input type="text"
+                                                                   data-target="input"
+                                                                   data-inputmask="'mask': '99999'"
+                                                                   class="form-control"
+                                                                   name="MAX_PRICE"
+                                                                   placeholder="до">
+                                                            <span class="filter__clear" data-target="clear">
+                                                                <svg class="filter__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <a class="filter__collapse" data-bs-toggle="collapse" href="#hours" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <span class="filter__show">
+                                                <svg class="filter__icon filter__icon_show" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            </span>
+                                            Количество часов
+                                        </a>
+                                        <div class="filter__hidden collapse show" id="hours">
+                                            <div class="filter__content">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="filter__wrap">
+                                                            <input type="text"
+                                                                   data-target="input"
+                                                                   data-inputmask="'mask': '99999'"
+                                                                   class="form-control"
+                                                                   name="MIN_HOURS"
+                                                                   placeholder="от">
+                                                            <span class="filter__clear" data-target="clear">
+                                                                <svg class="filter__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="filter__wrap">
+                                                            <input type="text"
+                                                                   data-target="input"
+                                                                   data-inputmask="'mask': '99999'"
+                                                                   class="form-control"
+                                                                   NAME="MAX_HOURS"
+                                                                   placeholder="до">
+                                                            <span class="filter__clear" data-target="clear">
+                                                                <svg class="filter__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__item" data-target="filter-item">
+                                        <a class="filter__collapse" data-bs-toggle="collapse" href="#programs" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <span class="filter__show">
+                                                <svg class="filter__icon filter__icon_show" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            </span>
+                                            Вид программы
+                                        </a>
+                                        <div class="filter__hidden collapse show" id="programs">
+                                            <div class="filter__content">
+                                                <div class="filter__form-group">
+                                                    <input type="text"
+                                                           data-target="search"
+                                                           class="form-control"
+                                                           name="PROGRAMS">
+                                                </div>
+                                                <input type="checkbox" id="webinar" class="filter__checkbox">
+                                                <label for="webinar" data-target="value" class="filter__label">Вебинар
+                                                </label>
+                                                <input type="checkbox" id="course" class="filter__checkbox">
+                                                <label for="course" data-target="value" class="filter__label">Онлайн-курс
+                                                </label>
+                                                <input type="checkbox" id="qualification" class="filter__checkbox">
+                                                <label for="qualification" data-target="value" class="filter__label">Повышение квалификации
+                                                </label>
+                                                <input type="checkbox" id="prepare" class="filter__checkbox">
+                                                <label for="prepare" data-target="value" class="filter__label">Профессиональная переподготовка
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__item" data-target="filter-item">
+                                        <a class="filter__collapse" data-bs-toggle="collapse" href="#edu-form" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <span class="filter__show">
+                                                <svg class="filter__icon filter__icon_show" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            </span>
+                                            Форма обучения
+                                        </a>
+                                        <div class="filter__hidden collapse show" id="edu-form">
+                                            <div class="filter__content">
+                                                <input type="checkbox" id="online" class="filter__checkbox">
+                                                <label for="online" data-target="value" class="filter__label">Дистанционная
+                                                </label>
+                                                <input type="checkbox" id="half" class="filter__checkbox">
+                                                <label for="half" data-target="value" class="filter__label">Заочная форма обучения
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__item" data-target="filter-item">
+                                        <a class="filter__collapse" data-bs-toggle="collapse" href="#sections" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <span class="filter__show">
+                                                <svg class="filter__icon filter__icon_show" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            </span>
+                                            Разделы
+                                        </a>
+                                        <div class="filter__hidden collapse show" id="sections">
+                                            <div class="filter__content">
+                                                <div class="filter__form-group">
+                                                    <input type="text"
+                                                           data-target="search"
+                                                           class="form-control"
+                                                           name="SECTIONS">
+                                                </div>
+                                                <input type="checkbox" id="education-and-pedagogical" class="filter__checkbox">
+                                                <label for="education-and-pedagogical" data-target="value" class="filter__label">Образование и педагогика
+                                                </label>
+                                                <input type="checkbox" id="social-job" class="filter__checkbox">
+                                                <label for="social-job" data-target="value" class="filter__label">Социальная работа
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="filter__submit" value="ПРИМЕНИТЬ">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-9">
+                            <div class="programs">
+                                <div class="programs__item" data-target="item">
+                                    <div class="program-card">
+                                        <div class="program-card__title" data-target="title">
+                                            Пример карточки вне получения данных от сервера
+                                        </div>
+                                        <div class="program-card__body">
+                                            <div class="program-card__text" data-target="text">
+                                                Программа направлена на получение слушателями профессиональных компетенций, необходимых для выполнения нового вида деятельности, связанной с оказанием коррекционной помощи несовершеннолетним на базе учреждений образования, социальной сферы,  здравоохранения и пр.; приобретение новой квалификации «Учитель-дефектолог».
+                                                Продолжительность программы - 1 год.
+                                            </div>
+                                            <div class="program-card__price" data-target="price">
+                                                от 46 0000.00 руб.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="orientation">
             <div class="container">
                 <div class="orientation__title">
