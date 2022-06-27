@@ -26,6 +26,7 @@ export default class CardsData {
     }
 
     insertElem(item) {
+        this.block.append(item);
     }
 
     getArrayElems(data) {
