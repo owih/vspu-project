@@ -19,18 +19,28 @@ body.lock{
   overflow: hidden;
 }
 .title-sided {
+  @media (max-width: 992px) {
+    text-align: center;
+  }
   &__main {
     font-size: 32px;
     font-weight: 700;
     color: #39adfc;
     text-transform: uppercase;
     letter-spacing: 7px;
+    @media (max-width: 576px) {
+      font-size: 26px;
+    }
   }
   &__description {
     font-weight: inherit;
     line-height: 54px;
     color: #25234d;
     font-size: 60px;
+    @media (max-width: 576px) {
+      line-height: 43px;
+      font-size: 45px;
+    }
   }
   margin-bottom: 20px;
 }
@@ -60,6 +70,10 @@ body.lock{
       width: 254px;
       margin: 0 0 0 25px;
     }
+    @media (max-width: 576px) {
+      width: 204px;
+      margin: 0 0 0 5px;
+    }
   }
   &__menu{
     list-style-type: none;
@@ -74,6 +88,9 @@ body.lock{
       &:last-child{
         padding-bottom: 0;
       }
+    }
+    @media (max-width: 576px) {
+      font-size: 20px;
     }
   }
   &__icon{
@@ -186,10 +203,23 @@ body.lock{
     display: block;
     width: max-content;
     margin: 40px 140px 40px auto;
+    @media (max-width: 1200px) {
+      margin: 40px 20px 40px auto;
+    }
+    @media (max-width: 992px) {
+      margin: 40px auto;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   &__container{
     background: url("../images/about/children.png") no-repeat center;
     background-size: 100% auto;
+    @media (max-width: 992px) {
+      background: none;
+    }
   }
   &__image{
     position: absolute;
@@ -206,6 +236,10 @@ body.lock{
   }
   &__menu{
     padding: 0;
+    @media (max-width: 992px) {
+      text-align: left;
+    }
+
   }
   &__item{
     list-style-type: none;
@@ -223,15 +257,16 @@ body.lock{
   &__submenu{
     padding-left: 20px;
   }
-  &__button{
-    width: 253px;
-  }
 }
 
 .orientation{
   background-color: #f4f4f9;
   padding:  0 0 100px 0;
   margin: 100px 0 30px 0;
+  @media (max-width: 576px) {
+    padding: 0 0 40px 0;
+    margin: 10px 0 30px 0;
+  }
   &::before{
     content: "";
     display: block;
@@ -250,6 +285,10 @@ body.lock{
     max-width: 300px;
     font-size: 52px;
     font-weight: 700;
+    @media (max-width: 992px) {
+      margin: 0 auto;
+      font-size: 46px;
+    }
   }
 }
 
@@ -258,31 +297,66 @@ body.lock{
   display: flex;
   flex-wrap: wrap;
   margin: -16px;
+  text-align: left;
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
   &__item{
     padding: 16px;
     flex: 0 0 20%;
-
+    @media (max-width: 1200px) {
+      flex: 0 0 250px;
+    }
     &:nth-child(3) {
-      transform: translateY(-60px);
+      @media (min-width: 1200px) {
+        transform: translateY(-60px);
+      }
     }
     &:nth-child(4) {
-      transform: translateY(-120px);
+      @media (min-width: 1200px) {
+        transform: translateY(-120px);
+      }
     }
     &:nth-child(5) {
-      transform: translateY(-180px);
+      @media (min-width: 1200px) {
+        transform: translateY(-180px);
+      }
     }
     &:nth-child(8) {
-      transform: translateY(-60px);
+      @media (min-width: 1200px) {
+        transform: translateY(-60px);
+      }
     }
     &:nth-child(9) {
-      transform: translateY(-120px);
+      @media (min-width: 1200px) {
+        transform: translateY(-120px);
+      }
     }
     &:nth-child(10) {
-      transform: translateY(-180px);
+      @media (min-width: 1200px) {
+        transform: translateY(-180px);
+      }
     }
   }
 }
-
+.group{
+  text-align: center;
+  &__content{
+    transition: max-height 3s linear;
+    @media (max-width: 1200px) {
+      overflow: hidden;
+    }
+  }
+  &__button{
+    display: none;
+    margin-top: 10px;
+    @media (max-width: 1200px) {
+      display: inline-block;
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+}
 .direction-card {
   box-shadow: 0 0 19px 0 #e4dfdf;
   cursor: pointer;
@@ -316,13 +390,19 @@ body.lock{
 
 .webinars-card{
   box-shadow: 0 0 14px 0 #ccc;
+  height: 100%;
   &__body{
     font-family: Arial, sans-serif;
+    height: 100%;
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__description{
     color: #666;
     text-align: center;
     margin: 10px 0;
+    word-break: break-word;
   }
   &__button{
     display: block;
@@ -338,6 +418,13 @@ body.lock{
       color: white;
       opacity: .9;
     }
+  }
+  &__text-container{
+    padding: 10px 15px;
+    flex: 1 1 auto;
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
