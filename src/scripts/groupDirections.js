@@ -1,28 +1,47 @@
 export default class GroupDirections{
-    constructor(block) {
-        this.container = document.querySelector('.group__content');
-        this.btn = document.querySelector('.group__button');
-        this.init(this.container,block.clientHeight);
+    constructor(group, eventName) {
+        this.group = group;
+        this.eventName = eventName;
+        this.container = group.querySelector('.group__content');
+        this.block = group.querySelector('.directions__item');
+        this.blockHeight = this.block.clientHeight;
+        this.btn = group.querySelector('.group__button');
+        this.isClick = true;
+        this.init();
     }
-    init(container, blockHeight){
-        let isClick = true;
-        if(window.outerWidth < 1200) container.style.maxHeight = blockHeight  + 10 + "px";
-        else container.style.maxHeight = 13 * blockHeight + "px";
+    init(){
+        this.hiddenBlock();
+        if(this.eventName !== "resize") {
+            this.addListener();
+        }
+    }
+    hiddenBlock(){
+        if(window.innerWidth < 1200){
+            this.setParametersGroup(this.blockHeight  + 30, "Показать больше", true, "remove");
+        }
+        else {
+            this.setParametersGroup(this.countRow() * this.blockHeight , "Показать больше", true, "remove");
+        }
+    }
+    addListener(){
         this.btn.addEventListener('click', (e) => {
             e.preventDefault();
-            if(isClick){
-                container.style.maxHeight = 13 * blockHeight + "px";
-                setTimeout(() =>{
-                    this.btn.textContent = "Свернуть";
-                }, 1500);
-                isClick = false;
+            this.eventName = e.type;
+            if(this.isClick){
+                this.setParametersGroup(this.countRow() * this.blockHeight , "Спрятать", false, "add");
             } else{
-                container.style.maxHeight = blockHeight  + 10 + "px";
-                setTimeout(() =>{
-                    this.btn.textContent = "Развернуть";
-                }, 1500);
-                isClick = true;
+                this.setParametersGroup(this.blockHeight  + 30, "Показать больше", true, "remove");
             }
         })
+    }
+    setParametersGroup(height, text, bool, modOpen){
+        this.container.style.maxHeight = height + "px";
+        (modOpen === "add") ? this.container.classList.add('open') : this.container.classList.remove('open');
+        this.btn.textContent = text;
+        this.isClick = bool;
+    }
+    countRow(){
+        let countColumn = Math.floor(this.group.offsetWidth / this.block.offsetWidth);
+        return Math.ceil(10 / countColumn)
     }
 }
