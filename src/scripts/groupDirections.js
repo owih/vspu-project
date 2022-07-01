@@ -1,47 +1,78 @@
 export default class GroupDirections{
-    constructor(group, eventName) {
-        this.group = group;
-        this.eventName = eventName;
-        this.container = group.querySelector('.group__content');
-        this.block = group.querySelector('.directions__item');
-        this.blockHeight = this.block.clientHeight;
-        this.btn = group.querySelector('.group__button');
+    constructor(block) {
+        this.block = block;
+        this.container =  this.block.querySelector('.group__content');
+        this.card =  this.block.querySelector('.directions__item');
+        this.btn = this.block.querySelector('.group__button');
+        this.cardHeight = this.card.clientHeight;
+        this.beforeWidth = window.innerWidth;
         this.isClick = true;
+        this.isResize = true;
         this.init();
     }
     init(){
         this.hiddenBlock();
-        if(this.eventName !== "resize") {
-            this.addListener();
-        }
+        this.addClickListener();
+        this.addResizeListener();
     }
     hiddenBlock(){
-        if(window.innerWidth < 1200){
-            this.setParametersGroup(this.blockHeight  + 30, "Показать больше", true, "remove");
+        if(window.innerWidth < 768 && this.isResize){
+            this.setMaxHeight(this.cardHeight  + 30);
+            this.setTextBtn("Показать больше");
+            this.setIsClick(true);
+            this.isResize = false;
         }
-        else {
-            this.setParametersGroup(this.countRow() * this.blockHeight , "Показать больше", true, "remove");
+        else if (window.innerWidth >= 768 && !this.isResize){
+            this.setMaxHeight(this.countRow() * this.cardHeight + 65);
+            this.setTextBtn("Показать больше");
+            if(this.container.classList.contains('group__content_open')) this.container.classList.remove('group__content_open');
+            this.setIsClick(true);
+            this.isResize = true;
         }
     }
-    addListener(){
+    addClickListener(){
         this.btn.addEventListener('click', (e) => {
             e.preventDefault();
-            this.eventName = e.type;
-            if(this.isClick){
-                this.setParametersGroup(this.countRow() * this.blockHeight , "Спрятать", false, "add");
-            } else{
-                this.setParametersGroup(this.blockHeight  + 30, "Показать больше", true, "remove");
+            this.setParametersGroup();
+        });
+    }
+    addResizeListener(){
+        window.addEventListener('resize', () =>{
+            if(this.isChangedWidthWindow()){
+                this.hiddenBlock();
             }
         })
     }
-    setParametersGroup(height, text, bool, modOpen){
+    setParametersGroup(){
+        if(this.isClick){
+            this.setMaxHeight(this.countRow() * this.cardHeight + 65);
+            this.setClassOpen();
+            this.setTextBtn("Спрятать");
+            this.setIsClick(false);
+        } else{
+            this.setMaxHeight(this.cardHeight  + 30);
+            this.setClassOpen();
+            this.setTextBtn("Показать больше");
+            this.setIsClick(true);
+        }
+    }
+    setMaxHeight(height){
         this.container.style.maxHeight = height + "px";
-        (modOpen === "add") ? this.container.classList.add('open') : this.container.classList.remove('open');
+    }
+    setClassOpen(){
+        this.container.classList.toggle('group__content_open');
+    }
+    setTextBtn(text){
         this.btn.textContent = text;
+    }
+    setIsClick(bool){
         this.isClick = bool;
     }
     countRow(){
-        let countColumn = Math.floor(this.group.offsetWidth / this.block.offsetWidth);
+        let countColumn = Math.floor(this.container.offsetWidth / this.card.offsetWidth);
         return Math.ceil(10 / countColumn)
+    }
+    isChangedWidthWindow(){
+        return this.beforeWidth !== window.innerWidth;
     }
 }

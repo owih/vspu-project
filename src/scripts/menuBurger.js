@@ -1,9 +1,10 @@
 
 export  default  class Menu{
-    constructor(header) {
-        this.menuIcon = header.querySelector('.header__icon');
-        this.menuBody = header.querySelector('.header__navigation');
-        this.menuLinks = header.querySelectorAll('.header__link[data-goto]')
+    constructor(block) {
+        this.block = block;
+        this.menuIcon = this.block.querySelector('.header__icon');
+        this.menuBody = this.block.querySelector('.header__navigation');
+        this.menuLinks = this.block.querySelectorAll('.header__link[data-goto]')
 
         this.init();
     }

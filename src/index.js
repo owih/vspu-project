@@ -9,14 +9,11 @@ import CardsData from "./scripts/CardsData";
 
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    new  Menu(document.querySelector('.header'));
-    new GroupDirections(document.querySelector('.group'), e.type);
+    [...document.querySelectorAll('.header')].forEach((elem) => new Menu(elem));
+    [...document.querySelectorAll('.group')].forEach((elem) => new GroupDirections(elem));
     [...document.querySelectorAll('.swiper')].forEach((elem) => new Slider(elem));
     [...document.querySelectorAll('[data-inputmask]')].forEach((elem) => new InputMaskPlug(elem));
     [...document.querySelectorAll('.filter')].forEach((elem) => new Filter(elem));
     [...document.querySelectorAll('.programs')].forEach((elem) => new CardsData(elem));
 })
 
-window.addEventListener('resize', (e) => {
-    new GroupDirections(document.querySelector('.group'),e.type);
-})
