@@ -2,26 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ИДО</title>
 </head>
 <body>
 <div class="wrapper">
     <header class="header">
         <div class="container">
-            <a href="#" class="header__logo">
-                <img src="images/Logo.png" alt="logo" class="logo">
-            </a>
-            <nav class="header__navigation">
-                <ul class="header__menu">
-                    <li class="header__item"><a href="#" class="header__link">О нас</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Профессиональная переподготовка</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Повышение квалификации</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Профобучение</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Вебинары</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Онлайн-курсы</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Дети и Взрослые</a></li>
-                </ul>
-            </nav>
+            <div class="header__container">
+                <a href="#" class="header__logo">
+                    <img src="images/Logo.png" alt="logo" class="logo">
+                </a>
+                <nav class="header__navigation ">
+                    <ul class="header__menu">
+                        <li class="header__item"><a data-goto=".about" href="#" class="header__link">О нас</a></li>
+                        <li class="header__item"><a data-goto="" href="#" class="header__link">Профессиональная переподготовка</a></li>
+                        <li class="header__item"><a data-goto="" href="#" class="header__link">Повышение квалификации</a></li>
+                        <li class="header__item"><a data-goto="" href="#" class="header__link">Профобучение</a></li>
+                        <li class="header__item"><a data-goto=".webinars" href="#" class="header__link">Вебинары</a></li>
+                        <li class="header__item"><a data-goto=".courses" href="#" class="header__link">Онлайн-курсы</a></li>
+                        <li class="header__item"><a data-goto=".orientation" href="#" class="header__link">Дети и Взрослые</a></li>
+                    </ul>
+                </nav>
+                <div class="header__icon">
+                    <span></span>
+                </div>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -274,468 +282,493 @@
                             </div>
                         </div>
                     </div>
-                    <div class="directions">
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
+                    <div class="group">
+                        <div class="group__content">
+                            <div class="shadow"></div>
+                            <div class="directions">
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="directions__item">
+                                    <div class="direction-card">
+                                        <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
+                                        <h4 class="direction-card__title">Профф. обучение</h4>
+                                        <ul class="direction-card__list">
+                                            <li class="direction-card__item">Социальный работник</li>
+                                            <li class="direction-card__item">Вожатый</li>
+                                            <li class="direction-card__item">Няня</li>
+                                            <li class="direction-card__item">Помощник воспитателя</li>
+                                            <li class="direction-card__item">Младший воспитатель</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="directions__item">
-                            <div class="direction-card">
-                                <img src="images/box/picture_1.png" alt="picture" class="direction-card__image">
-                                <h4 class="direction-card__title">Профф. обучение</h4>
-                                <ul class="direction-card__list">
-                                    <li class="direction-card__item">Социальный работник</li>
-                                    <li class="direction-card__item">Вожатый</li>
-                                    <li class="direction-card__item">Няня</li>
-                                    <li class="direction-card__item">Помощник воспитателя</li>
-                                    <li class="direction-card__item">Младший воспитатель</li>
-                                </ul>
-                            </div>
+                        <div class="group__buttons-container">
+                            <a href="#" class="btn btn-primary group__button">Показать больше</a>
+                            <a href="#" class="btn btn-primary orientation__button">НАЙТИ ЕЩЁ</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section">
-            <div class="container">
-                <div class="title">
-                    <h1 class="title__text">ВЕБИНАРЫ</h1>
-                    <div class="title__description">Смотри вместе с нами</div>
-                </div>
-                <div class="section__content">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="webinars-card">
-                                        <div class="webinars-card__body">
-                                            <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
-                                            <div class="webinars-card__description">
-                                                Организация учебно-исследовательской
-                                                деятельности школьников в условиях ФГОС: основные этапы и их содержание
+            <div class="webinars">
+                <div class="container">
+                    <div class="title">
+                        <h1 class="title__text">ВЕБИНАРЫ</h1>
+                        <div class="title__description">Смотри вместе с нами</div>
+                    </div>
+                    <div class="section__content">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="webinars-card">
+                                            <div class="webinars-card__body">
+                                                <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
+                                                <div class="webinars-card__text-container">
+                                                    <div class="webinars-card__description">
+                                                        Организация учебно-исследовательской
+                                                        деятельности школьников в условиях ФГОС: основные этапы и их содержание
+                                                    </div>
+                                                    <a href="#" class="webinars-card__button">
+                                                        Смотерть запись вебинара
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <a href="#" class="webinars-card__button">
-                                                Смотерть запись вебинара
-                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="webinars-card">
+                                            <div class="webinars-card__body">
+                                                <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
+                                                <div class="webinars-card__text-container">
+                                                    <div class="webinars-card__description">
+                                                        Организация учебно-исследовательской
+                                                        деятельности школьников в условиях ФГОС: основные этапы и их содержание
+                                                    </div>
+                                                    <a href="#" class="webinars-card__button">
+                                                        Смотерть запись вебинара
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="webinars-card">
+                                            <div class="webinars-card__body">
+                                                <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
+                                                <div class="webinars-card__text-container">
+                                                    <div class="webinars-card__description">
+                                                        Организация учебно-исследовательской
+                                                        деятельности школьников в условиях ФГОС: основные этапы и их содержание
+                                                    </div>
+                                                    <a href="#" class="webinars-card__button">
+                                                        Смотерть запись вебинара
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="webinars-card">
+                                            <div class="webinars-card__body">
+                                                <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
+                                                <div class="webinars-card__text-container">
+                                                    <div class="webinars-card__description">
+                                                        Организация учебно-исследовательской
+                                                        деятельности школьников в условиях ФГОС: основные этапы и их содержание
+                                                    </div>
+                                                    <a href="#" class="webinars-card__button">
+                                                        Смотерть запись вебинара
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="webinars-card">
+                                            <div class="webinars-card__body">
+                                                <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
+                                                <div class="webinars-card__text-container">
+                                                    <div class="webinars-card__description">
+                                                        Организация учебно-исследовательской
+                                                        деятельности школьников в условиях ФГОС: основные этапы и их содержание
+                                                    </div>
+                                                    <a href="#" class="webinars-card__button">
+                                                        Смотерть запись вебинара
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="webinars-card">
+                                            <div class="webinars-card__body">
+                                                <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
+                                                <div class="webinars-card__text-container">
+                                                    <div class="webinars-card__description">
+                                                        Организация учебно-исследовательской
+                                                        деятельности школьников в условиях ФГОС: основные этапы и их содержание
+                                                    </div>
+                                                    <a href="#" class="webinars-card__button">
+                                                        Смотерть запись вебинара
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="d-flex justify-content-around align-items-center flex-column h-100">
+                                            <p class="h3 text-center">Еще больше вебинаров у нас на сайте!</p>
+                                            <a href="#" class="btn btn-primary btn-lg w-100">Все вебинары</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="webinars-card">
-                                        <div class="webinars-card__body">
-                                            <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
-                                            <div class="webinars-card__description">
-                                                Организация учебно-исследовательской
-                                                деятельности школьников в условиях ФГОС: основные этапы и их содержание
-                                            </div>
-                                            <a href="#" class="webinars-card__button">
-                                                Смотерть запись вебинара
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="webinars-card">
-                                        <div class="webinars-card__body">
-                                            <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
-                                            <div class="webinars-card__description">
-                                                Организация учебно-исследовательской
-                                                деятельности школьников в условиях ФГОС: основные этапы и их содержание
-                                            </div>
-                                            <a href="#" class="webinars-card__button">
-                                                Смотерть запись вебинара
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="webinars-card">
-                                        <div class="webinars-card__body">
-                                            <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
-                                            <div class="webinars-card__description">
-                                                Организация учебно-исследовательской
-                                                деятельности школьников в условиях ФГОС: основные этапы и их содержание
-                                            </div>
-                                            <a href="#" class="webinars-card__button">
-                                                Смотерть запись вебинара
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="webinars-card">
-                                        <div class="webinars-card__body">
-                                            <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
-                                            <div class="webinars-card__description">
-                                                Организация учебно-исследовательской
-                                                деятельности школьников в условиях ФГОС: основные этапы и их содержание
-                                            </div>
-                                            <a href="#" class="webinars-card__button">
-                                                Смотерть запись вебинара
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="webinars-card">
-                                        <div class="webinars-card__body">
-                                            <img src="images/webinar/people.jpg" alt="people" class="webinars-card__image">
-                                            <div class="webinars-card__description">
-                                                Организация учебно-исследовательской
-                                                деятельности школьников в условиях ФГОС: основные этапы и их содержание
-                                            </div>
-                                            <a href="#" class="webinars-card__button">
-                                                Смотерть запись вебинара
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="p-4 h-100">
-                                    <div class="d-flex justify-content-around align-items-center flex-column h-100">
-                                        <p class="h3 text-center">Еще больше вебинаров у нас на сайте!</p>
-                                        <a href="#" class="btn btn-primary btn-lg w-100">Все вебинары</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </section>
         <div class="container">
-            <section class="section">
-            <div class="section__title">
-                <div class="title">
-                    <h1 class="title__text">ОНЛАЙН-КУРСЫ</h1>
-                    <div class="title__description">Развивайся вместе с нами</div>
-                </div>
-            </div>
-            <div class="section__content">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="p-4 h-100">
-                                <div class="course-card">
-                                    <div class="course-card__wrapper">
-                                        <div class="course-card__image">
-                                            <img src="./images/course/course.jpg" alt="course">
-                                        </div>
-                                        <div class="course-card__body">
-                                            <div class="course-card__message">
-                                                <a class="course-card__link" href="#">Повышение квалификации</a>
-                                                24 часа
-                                            </div>
-                                            <div class="course-card__title">
-                                                <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
-                                            </div>
-                                            <div class="course-card__row">
-                                                <div class="course-card__avatar">
-                                                    <img src="./images/course/avatar.jpg" alt="avatar">
-                                                </div>
-                                                <div class="course-card__description">
-                                                    <div class="course-card__name">
-                                                        <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
-                                                    </div>
-                                                    <div class="course-card__rewards">
-                                                        кандидат педагогических наук, доцент
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="course-card__footer">
-                                            <div class="course-card__row course-card__row_footer">
-                                                <div class="course-card__price">
-                                                    1 000 Р
-                                                </div>
-                                                <div class="course-card__more">
-                                                    <a href="#" class="course-card__more-link">
-                                                        Подробнее
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="p-4 h-100">
-                                <div class="course-card">
-                                    <div class="course-card__wrapper">
-                                        <div class="course-card__image">
-                                            <img src="./images/course/course.jpg" alt="course">
-                                        </div>
-                                        <div class="course-card__body">
-                                            <div class="course-card__message">
-                                                <a class="course-card__link" href="#">Повышение квалификации</a>
-                                                24 часа
-                                            </div>
-                                            <div class="course-card__title">
-                                                <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
-                                            </div>
-                                            <div class="course-card__row">
-                                                <div class="course-card__avatar">
-                                                    <img src="./images/course/avatar.jpg" alt="avatar">
-                                                </div>
-                                                <div class="course-card__description">
-                                                    <div class="course-card__name">
-                                                        <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
-                                                    </div>
-                                                    <div class="course-card__rewards">
-                                                        кандидат педагогических наук, доцент
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="course-card__footer">
-                                            <div class="course-card__row course-card__row_footer">
-                                                <div class="course-card__price">
-                                                    1 000 Р
-                                                </div>
-                                                <div class="course-card__more">
-                                                    <a href="#" class="course-card__more-link">
-                                                        Подробнее
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="p-4 h-100">
-                                <div class="course-card">
-                                    <div class="course-card__wrapper">
-                                        <div class="course-card__image">
-                                            <img src="./images/course/course.jpg" alt="course">
-                                        </div>
-                                        <div class="course-card__body">
-                                            <div class="course-card__message">
-                                                <a class="course-card__link" href="#">Повышение квалификации</a>
-                                                24 часа
-                                            </div>
-                                            <div class="course-card__title">
-                                                <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
-                                            </div>
-                                            <div class="course-card__row">
-                                                <div class="course-card__avatar">
-                                                    <img src="./images/course/avatar.jpg" alt="avatar">
-                                                </div>
-                                                <div class="course-card__description">
-                                                    <div class="course-card__name">
-                                                        <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
-                                                    </div>
-                                                    <div class="course-card__rewards">
-                                                        кандидат педагогических наук, доцент
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="course-card__footer">
-                                            <div class="course-card__row course-card__row_footer">
-                                                <div class="course-card__price">
-                                                    1 000 Р
-                                                </div>
-                                                <div class="course-card__more">
-                                                    <a href="#" class="course-card__more-link">
-                                                        Подробнее
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="p-4 h-100">
-                                <div class="course-card">
-                                    <div class="course-card__wrapper">
-                                        <div class="course-card__image">
-                                            <img src="./images/course/course.jpg" alt="course">
-                                        </div>
-                                        <div class="course-card__body">
-                                            <div class="course-card__message">
-                                                <a class="course-card__link" href="#">Повышение квалификации</a>
-                                                24 часа
-                                            </div>
-                                            <div class="course-card__title">
-                                                <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
-                                            </div>
-                                            <div class="course-card__row">
-                                                <div class="course-card__avatar">
-                                                    <img src="./images/course/avatar.jpg" alt="avatar">
-                                                </div>
-                                                <div class="course-card__description">
-                                                    <div class="course-card__name">
-                                                        <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
-                                                    </div>
-                                                    <div class="course-card__rewards">
-                                                        кандидат педагогических наук, доцент
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="course-card__footer">
-                                            <div class="course-card__row course-card__row_footer">
-                                                <div class="course-card__price">
-                                                    1 000 Р
-                                                </div>
-                                                <div class="course-card__more">
-                                                    <a href="#" class="course-card__more-link">
-                                                        Подробнее
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="p-4 h-100">
-                                <div class="d-flex justify-content-around align-items-center flex-column h-100">
-                                    <p class="h3 text-center">Еще больше курсов у нас на сайте!</p>
-                                    <a href="#" class="btn btn-primary btn-lg w-100">Все курсы</a>
-                                </div>
-                            </div>
+            <div class="courses">
+                <section class="section">
+                    <div class="section__title">
+                        <div class="title">
+                            <h1 class="title__text">ОНЛАЙН-КУРСЫ</h1>
+                            <div class="title__description">Развивайся вместе с нами</div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
+                    <div class="section__content">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="course-card">
+                                            <div class="course-card__wrapper">
+                                                <div class="course-card__image">
+                                                    <img src="./images/course/course.jpg" alt="course">
+                                                </div>
+                                                <div class="course-card__body">
+                                                    <div class="course-card__message">
+                                                        <a class="course-card__link" href="#">Повышение квалификации</a>
+                                                        24 часа
+                                                    </div>
+                                                    <div class="course-card__title">
+                                                        <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
+                                                    </div>
+                                                    <div class="course-card__row">
+                                                        <div class="course-card__avatar">
+                                                            <img src="./images/course/avatar.jpg" alt="avatar">
+                                                        </div>
+                                                        <div class="course-card__description">
+                                                            <div class="course-card__name">
+                                                                <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
+                                                            </div>
+                                                            <div class="course-card__rewards">
+                                                                кандидат педагогических наук, доцент
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="course-card__footer">
+                                                    <div class="course-card__row course-card__row_footer">
+                                                        <div class="course-card__price">
+                                                            1 000 Р
+                                                        </div>
+                                                        <div class="course-card__more">
+                                                            <a href="#" class="course-card__more-link">
+                                                                Подробнее
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="course-card">
+                                            <div class="course-card__wrapper">
+                                                <div class="course-card__image">
+                                                    <img src="./images/course/course.jpg" alt="course">
+                                                </div>
+                                                <div class="course-card__body">
+                                                    <div class="course-card__message">
+                                                        <a class="course-card__link" href="#">Повышение квалификации</a>
+                                                        24 часа
+                                                    </div>
+                                                    <div class="course-card__title">
+                                                        <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
+                                                    </div>
+                                                    <div class="course-card__row">
+                                                        <div class="course-card__avatar">
+                                                            <img src="./images/course/avatar.jpg" alt="avatar">
+                                                        </div>
+                                                        <div class="course-card__description">
+                                                            <div class="course-card__name">
+                                                                <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
+                                                            </div>
+                                                            <div class="course-card__rewards">
+                                                                кандидат педагогических наук, доцент
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="course-card__footer">
+                                                    <div class="course-card__row course-card__row_footer">
+                                                        <div class="course-card__price">
+                                                            1 000 Р
+                                                        </div>
+                                                        <div class="course-card__more">
+                                                            <a href="#" class="course-card__more-link">
+                                                                Подробнее
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="course-card">
+                                            <div class="course-card__wrapper">
+                                                <div class="course-card__image">
+                                                    <img src="./images/course/course.jpg" alt="course">
+                                                </div>
+                                                <div class="course-card__body">
+                                                    <div class="course-card__message">
+                                                        <a class="course-card__link" href="#">Повышение квалификации</a>
+                                                        24 часа
+                                                    </div>
+                                                    <div class="course-card__title">
+                                                        <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
+                                                    </div>
+                                                    <div class="course-card__row">
+                                                        <div class="course-card__avatar">
+                                                            <img src="./images/course/avatar.jpg" alt="avatar">
+                                                        </div>
+                                                        <div class="course-card__description">
+                                                            <div class="course-card__name">
+                                                                <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
+                                                            </div>
+                                                            <div class="course-card__rewards">
+                                                                кандидат педагогических наук, доцент
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="course-card__footer">
+                                                    <div class="course-card__row course-card__row_footer">
+                                                        <div class="course-card__price">
+                                                            1 000 Р
+                                                        </div>
+                                                        <div class="course-card__more">
+                                                            <a href="#" class="course-card__more-link">
+                                                                Подробнее
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="course-card">
+                                            <div class="course-card__wrapper">
+                                                <div class="course-card__image">
+                                                    <img src="./images/course/course.jpg" alt="course">
+                                                </div>
+                                                <div class="course-card__body">
+                                                    <div class="course-card__message">
+                                                        <a class="course-card__link" href="#">Повышение квалификации</a>
+                                                        24 часа
+                                                    </div>
+                                                    <div class="course-card__title">
+                                                        <a class="course-card__link" href="#">Экологическое образование младших школьников</a>
+                                                    </div>
+                                                    <div class="course-card__row">
+                                                        <div class="course-card__avatar">
+                                                            <img src="./images/course/avatar.jpg" alt="avatar">
+                                                        </div>
+                                                        <div class="course-card__description">
+                                                            <div class="course-card__name">
+                                                                <a class="course-card__link" href="#">Машкова Светлана Васильевна</a>
+                                                            </div>
+                                                            <div class="course-card__rewards">
+                                                                кандидат педагогических наук, доцент
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="course-card__footer">
+                                                    <div class="course-card__row course-card__row_footer">
+                                                        <div class="course-card__price">
+                                                            1 000 Р
+                                                        </div>
+                                                        <div class="course-card__more">
+                                                            <a href="#" class="course-card__more-link">
+                                                                Подробнее
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="p-4 h-100">
+                                        <div class="d-flex justify-content-around align-items-center flex-column h-100">
+                                            <p class="h3 text-center">Еще больше курсов у нас на сайте!</p>
+                                            <a href="#" class="btn btn-primary btn-lg w-100">Все курсы</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
         </div>
     </main>
     <footer class="footer">
