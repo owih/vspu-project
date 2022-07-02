@@ -1,32 +1,117 @@
 const CLASSES = {
+    WRAPPER: 'programs__body',
     ITEM: 'programs__item',
     PROGRAM: 'program-card',
     TITLE: 'program-card__title',
     BODY: 'program-card__body',
     TEXT: 'program-card__text',
     PRICE: 'program-card__price',
+    INACTIVATE: 'inactive',
+};
+
+const SELECTORS = {
+    NEXT: '[data-action"next"]',
+    PREV: '[data-action"prev"]',
 };
 
 export default class CardsData {
     constructor(block) {
         this.block = block;
+        this.wrapper = this.block.getElementsByClassName(CLASSES.WRAPPER).item(0);
+        this.controls = this.block.querySelectorAll('[data-action]');
+        this.nextControl = this.block.querySelector('[data-action="next"]');
+        this.prevControl = this.block.querySelector('[data-action="prev"]');
+        this.url = this.block.dataset.url;
+        this.maxNumberOfItems = Number(this.block.dataset.max);
+        this.numberOfItems = Number(this.block.dataset.show) - 1;
+        this.counter = 1;
+        // this.link = this.block.getElementsByClassName(CLASSES.WRAPPER).item(0);
+        //TODO: доделать переход по ссылке через атрибут
+
+        this.clickHandler = this.clickHandler.bind(this);
 
         this.init();
     }
 
     init() {
-        fetch('http://jsonplaceholder.typicode.com/posts/?_limit=6')
+        console.log(this.controls)
+        this.getRequest();
+        this.addControlsListener();
+    }
+
+    getRequest() {
+        const ids = this.getIds();
+        const url = this.url + ids;
+
+        console.log(url)
+
+        fetch(url)
             .then(res => res.json())
             .then(data => this.setDataPosts(data))
     }
 
+    getIds() {
+        let stringOfId = '';
+        for (let i = this.counter; i <= this.numberOfItems + this.counter; i++) {
+            console.log(this.counter)
+            console.log(this.numberOfItems)
+            stringOfId = stringOfId + '&id=' + i.toString(10);
+        }
+        return stringOfId;
+    }
+
+    addControlsListener() {
+        this.controls.forEach((item) => {
+            item.addEventListener('click', this.clickHandler)
+        })
+    }
+
+    clickHandler(event) {
+        event.preventDefault();
+        if (event.target.dataset.action === 'next') this.nextPage();
+        if (event.target.dataset.action === 'prev') this.prevPage();
+    }
+
+    nextPage() {
+        this.counter += this.numberOfItems + 1;
+        this.clearList();
+        this.getRequest();
+        this.isAvailable();
+        console.log(this.counter)
+    }
+
+    prevPage() {
+        this.counter -= this.numberOfItems + 1;
+        this.clearList();
+        this.getRequest();
+        this.isAvailable();
+        console.log(this.counter)
+    }
+
+    isAvailable() {
+        if (this.counter <= this.numberOfItems) this.prevControl.classList.add(CLASSES.INACTIVATE)
+        else this.prevControl.classList.remove(CLASSES.INACTIVATE);
+
+        if (this.counter >= this.maxNumberOfItems - this.numberOfItems - 1) this.nextControl.classList.add(CLASSES.INACTIVATE)
+        else this.nextControl.classList.remove(CLASSES.INACTIVATE);
+
+        console.log(this.maxNumberOfItems)
+        console.log(this.counter)
+        console.log('counter')
+    }
+
+    clearList() {
+        this.itemsArray = [];
+    }
+
     setDataPosts(data) {
-       const itemsArray = this.getArrayElems(data);
-       itemsArray.forEach((item) => this.insertElem(item))
+        this.itemsArray = this.getArrayElems(data);
+        this.wrapper.innerHTML = '';
+        this.itemsArray.forEach((item) => this.insertElem(item))
     }
 
     insertElem(item) {
-        this.block.append(item);
+        this.wrapper.append(item);
     }
 
     getArrayElems(data) {
@@ -42,8 +127,9 @@ export default class CardsData {
         const wrapper = document.createElement('div');
         wrapper.classList.add(CLASSES.ITEM);
 
-        const newElem = document.createElement('div');
+        const newElem = document.createElement('a');
         newElem.classList.add(CLASSES.PROGRAM);
+        newElem.setAttribute('href', '#')
 
         const title = document.createElement('div');
         title.classList.add(CLASSES.TITLE);
