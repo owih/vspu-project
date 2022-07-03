@@ -23,6 +23,7 @@ export default class GroupDirections {
         this.widthLimit = 992;
         this.isClick = true;
         this.isResize = true;
+        this.setParametersGroup = this.setParametersGroup.bind(this)
         this.init();
     }
 
@@ -52,7 +53,7 @@ export default class GroupDirections {
     }
 
     addClickListener() {
-        this.btn.addEventListener('click', this.setParametersGroup.bind(this));
+        this.btn.addEventListener('click', this.setParametersGroup);
     }
 
     addResizeListener() {
