@@ -214,6 +214,7 @@ body.lock{
 }
 .about{
   position: relative;
+  padding-top: 60px;
   &__content{
     display: block;
     width: 100%;
@@ -223,11 +224,8 @@ body.lock{
       width: max-content;
     }
     @include media-breakpoint-up(lg) {
-      margin: 40px 20px 40px auto;
+      margin: 0 0 0 auto;
       text-align: left;
-    }
-    @include media-breakpoint-up(xl) {
-      margin: 40px 140px 40px auto;
     }
   }
   &__container{
@@ -261,6 +259,12 @@ body.lock{
     line-height: 1.5;
     font-weight: 700;
     text-decoration: none;
+    @include media-breakpoint-up(xl) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
     &:hover{
       color: rgba(37,35,77,.812);
       text-decoration: underline;
@@ -599,7 +603,9 @@ body.lock{
 }
 
 .section {
-  margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
   &__title {
     margin-bottom: 20px;
     @include media-breakpoint-up(sm) {
@@ -786,6 +792,11 @@ body.lock{
 }
 
 .filter {
+  & &__hide-wrap {
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
   & .form-control {
     position: relative;
   }
