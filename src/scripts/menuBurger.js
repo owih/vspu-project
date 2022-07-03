@@ -1,10 +1,21 @@
+const SELECTORS ={
+    ICON: '.header__icon',
+    NAVIGATION: '.header__navigation',
+    LINKS: '.header__link[data-goto]',
+}
 
-export  default  class Menu{
+const CLASSES = {
+    ACTIVE: 'active',
+    LOCK: 'lock',
+}
+
+
+export  default  class MenuBurger{
     constructor(block) {
         this.block = block;
-        this.menuIcon = this.block.querySelector('.header__icon');
-        this.menuBody = this.block.querySelector('.header__navigation');
-        this.menuLinks = this.block.querySelectorAll('.header__link[data-goto]')
+        this.menuIcon = this.block.querySelector(SELECTORS.ICON);
+        this.menuBody = this.block.querySelector(SELECTORS.NAVIGATION);
+        this.menuLinks = this.block.querySelectorAll(SELECTORS.LINKS)
 
         this.init();
     }
@@ -25,6 +36,7 @@ export  default  class Menu{
             menuLink.addEventListener('click', (e) =>{
                 if(this.isGoto(menuLink)) {
                     this.scrollToSection(menuLink);
+                    this.subtractScrollbar();
                     this.removeClass();
                     e.preventDefault();
                 }
@@ -33,24 +45,29 @@ export  default  class Menu{
 
     }
     setClass(){
-        this.menuIcon.classList.toggle('active');
-        this.menuBody.classList.toggle('active');
-        document.body.classList.toggle('lock');
+        this.menuIcon.classList.toggle(CLASSES.ACTIVE);
+        this.menuBody.classList.toggle(CLASSES.ACTIVE);
+        document.body.classList.toggle(CLASSES.LOCK);
     }
     removeClass(){
-        if(this.menuIcon.classList.contains('active')
-            && this.menuBody.classList.contains('active')
-            && document.body.classList.contains('lock')){
-            this.menuIcon.classList.remove('active');
-            this.menuBody.classList.remove('active');
-            document.body.classList.remove('lock');
+        if(this.isStateActive()){
+            this.menuIcon.classList.remove(CLASSES.ACTIVE);
+            this.menuBody.classList.remove(CLASSES.ACTIVE);
+            document.body.classList.remove(CLASSES.LOCK);
         }
     }
+    isStateActive(){
+       return  this.menuIcon.classList.contains(CLASSES.ACTIVE)
+        && this.menuBody.classList.contains(CLASSES.ACTIVE)
+        && document.body.classList.contains(CLASSES.LOCK);
+    }
     subtractScrollbar(){
-        if(!document.body.classList.contains('lock')){
-            document.body.style.paddingRight = this.scrollbarWidth() + 'px';
-        } else{
-            document.body.style.paddingRight = 0 + 'px';
+        if(window.innerWidth <= 767){
+            if(!document.body.classList.contains(CLASSES.LOCK)) {
+                document.body.style.paddingRight = this.scrollbarWidth() + 'px';
+            } else{
+                document.body.style.paddingRight = 0 + 'px';
+            }
         }
     }
     scrollbarWidth() {
