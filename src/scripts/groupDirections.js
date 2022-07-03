@@ -6,6 +6,7 @@ const SELECTORS = {
 }
 const CLASSES = {
     OPEN: 'group__content_open',
+    ANIMATION: 'group__content_anim',
 }
 
 
@@ -35,21 +36,18 @@ export default class GroupDirections {
         if (this.isChangedCountRow() && window.innerWidth < this.widthLimit && this.container.classList.contains(CLASSES.OPEN)) {
             this.countRows = this.countRow();
             this.setMaxHeight(this.directions.offsetHeight);
-            console.log('resize');
         }
         if (window.innerWidth < this.widthLimit && this.isResize) {
             this.setMaxHeight(this.cardHeight + 30);
             this.setTextBtn(this.btn.dataset.textOpen);
             this.setIsClick(true);
             this.isResize = false;
-            console.log('resize');
         } else if (window.innerWidth >= this.widthLimit && !this.isResize) {
             this.setMaxHeight(this.directions.offsetHeight);
             this.setTextBtn(this.btn.dataset.textOpen);
             if (this.container.classList.contains(CLASSES.OPEN)) this.container.classList.remove(CLASSES.OPEN);
             this.setIsClick(true);
             this.isResize = true;
-            console.log('resize');
         }
     }
 
@@ -68,21 +66,24 @@ export default class GroupDirections {
 
     setParametersGroup(event) {
         event.preventDefault();
+        this.setAnim();
+        this.setClassOpen();
         if (this.isClick) {
             this.setMaxHeight(this.directions.offsetHeight);
-            this.setClassOpen();
             this.setTextBtn(this.btn.dataset.textClose);
             this.setIsClick(false);
             return;
         }
         this.setMaxHeight(this.cardHeight + 30);
-        setTimeout(() => {
-            this.setClassOpen();
-        }, 1000);
         this.setTextBtn(this.btn.dataset.textOpen);
         this.setIsClick(true);
     }
-
+    setAnim(){
+        this.container.classList.add(CLASSES.ANIMATION);
+        setTimeout(()=>{
+            this.container.classList.remove(CLASSES.ANIMATION)
+        }, 1000);
+    }
     setMaxHeight(height) {
         this.container.style.maxHeight = height + "px";
     }

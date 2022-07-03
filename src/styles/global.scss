@@ -215,6 +215,11 @@ body.lock{
 .about{
   position: relative;
   padding-top: 60px;
+  padding-bottom: 10px;
+  @include media-breakpoint-up(lg) {
+    background: url("../images/about/children.png") no-repeat center top;
+    background-size: 1826px;
+  }
   &__content{
     display: block;
     width: 100%;
@@ -230,10 +235,6 @@ body.lock{
   }
   &__container{
     background: none;
-    @include media-breakpoint-up(lg) {
-      background: url("../images/about/children.png") no-repeat center;
-      background-size: 100% auto;
-    }
   }
   &__image{
     position: absolute;
@@ -387,7 +388,7 @@ body.lock{
     overflow: hidden;
     position: relative;
     margin-bottom: 20px;
-    &_open{
+    &_anim{
       transition: max-height 1s linear;
     }
     &.group__content_open .shadow{
