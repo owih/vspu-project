@@ -218,7 +218,6 @@ body.lock{
   padding-bottom: 10px;
   @include media-breakpoint-up(lg) {
     background: url("../images/about/children.png") no-repeat center top;
-    background-size: 1826px;
   }
   &__content{
     display: block;

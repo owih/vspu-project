@@ -79,12 +79,14 @@ export default class GroupDirections {
         this.setTextBtn(this.btn.dataset.textOpen);
         this.setIsClick(true);
     }
-    setAnim(){
+
+    setAnim() {
         this.container.classList.add(CLASSES.ANIMATION);
-        setTimeout(()=>{
+        setTimeout(() => {
             this.container.classList.remove(CLASSES.ANIMATION)
         }, 1000);
     }
+
     setMaxHeight(height) {
         this.container.style.maxHeight = height + "px";
     }
